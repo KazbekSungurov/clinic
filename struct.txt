@@ -1,0 +1,72 @@
+PersonalData
+{
+	Phone      string
+	Email      string
+	Address    string
+	Polyclinic string
+}
+
+User
+{
+	ID           uint
+	FirstName    string
+	LastName     string
+	MiddleName   string
+	Gender       Gender
+	BirthDate    time.Time
+	Details      string
+	PersonalData
+}
+
+Patient
+{
+	ID        uint
+	Diagnosis string
+	User
+}
+
+Employee
+{
+	ID   uint
+	User
+}
+
+ScheduleDetails
+{
+	WeekDays            []time.Weekday
+	StartAt             time.Time
+	EndAt               time.Time
+	ExaminationDuration time.Duration
+	BreakStart          time.Time
+	BreakDuration       time.Duration
+	AppointmentsLimit   int
+}
+
+Appointment
+{
+	Day      time.Time
+	Patients []Patient
+}
+
+ScheduleOperation
+{
+	ID              uint
+	Appointments    []Appointment
+	ScheduleDetails
+}
+
+ScheduleConsult
+{
+	ID              uint
+	Appointments    []Appointment
+	ScheduleDetails
+}
+
+Department
+{
+	ID                uint
+	Name              string
+	Employees         []Employee
+	ScheduleConsult
+	ScheduleOperation
+}
