@@ -10,7 +10,6 @@ type appointment struct {
 }
 
 func (a *appointment) Create(m *model.Appointment) (id uint, err error) {
-	//TODO implement me
 	panic("implement me")
 }
 
