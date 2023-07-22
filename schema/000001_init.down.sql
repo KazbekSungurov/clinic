@@ -1,0 +1,11 @@
+DROP TABLE personal_data CASCADE;
+DROP TABLE users CASCADE;
+DROP TABLE patients CASCADE;
+DROP TABLE employees CASCADE;
+DROP TABLE schedule_details CASCADE;
+DROP TABLE appointments CASCADE;
+DROP TABLE schedule_operations CASCADE;
+DROP TABLE schedule_consults CASCADE;
+DROP TABLE departments CASCADE;
+
+DROP TYPE GENDER CASCADE;
